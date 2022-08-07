@@ -45,6 +45,9 @@
 												<td><?= $pesanan->nama_pemesan ?></td>
 												<td><?= $pesanan->nama_mobil ?></td>
 												<td><?= $pesanan->jenis_bayar ?></td>
+												<td><?= $pesanan->tgl_pinjam ?></td>
+												<td><?= $pesanan->tgl_kembali ?></td>
+												<td>Rp. <?= number_format($pesanan->total_harga, 2, ',', '.') ?></td>
                                                 
 											</tr>
 										<?php endwhile; ?>
@@ -55,7 +58,7 @@
 	
 <script>
 $(document).ready(function() {
-    $('#mauexport').DataTable( {
+    $('#dataTable').DataTable( {
         dom: 'Bfrtip',
         buttons: [
             'csv','excel', 'pdf', 'print'
